@@ -13,6 +13,12 @@ const PORT = 5000;
 app.use(cors());
 app.use(express.json());
 
+// ✅ Ensure uploads folder exists
+const uploadsDir = path.join(__dirname, "uploads");
+if (!fs.existsSync(uploadsDir)) {
+  fs.mkdirSync(uploadsDir);
+}
+
 // 📁 Setup for file uploads
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
