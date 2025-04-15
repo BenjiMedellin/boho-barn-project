@@ -1,0 +1,93 @@
+.box-container {
+  flex-shrink: 0;
+  width: 280px;
+  margin: 10px;
+}
+
+.box {
+  background-color: #f5efe0; /* warm, soft parchment tone */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.box:hover {
+  transform: scale(1.02);
+}
+
+.box-title {
+  font-size: 1rem;
+  color: #333;
+}
+
+.dropdown-content {
+  background-color: #fdf8ef; /* light beige */
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: #333;
+  gap: 8px;
+}
+
+.total-inside-box {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: right;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.pdf-link {
+  display: inline-block;
+  font-size: 1rem;
+  color: #3e3e3e;
+  text-decoration: none;
+  border-bottom: 1px dashed #a97b50;
+  padding-top: 10px;
+}
+
+.pdf-link:hover {
+  color: #6a4f2b;
+  border-color: #6a4f2b;
+}
+
+.upload-input {
+  font-size: 1rem;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  cursor: pointer;
+  width: 90%;              /* ✅ Prevents overflow */
+  max-width: 300px;        /* ✅ Keeps it compact */
+  box-sizing: border-box;
+}
+
+.submit-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #a97b50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #92633f;
+}
+
+

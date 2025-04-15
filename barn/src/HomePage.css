@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-image: url('./assets/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow-x: hidden;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.top-image {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  filter: blur(2px);
+}
+
+/* Hero Section */
+.hero-container {
+  position: relative;
+  width: 100%;
+}
+
+.hero-message {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+
+/* About Section */
+.about-section {
+  background-color: #f8f1e6; /* gentle paper-like tone */
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Box Scrolling */
+.box-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 20px;
+  justify-content: flex-start;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+.box-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.box-scroll-container::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.expanded-section {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 1200px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.site-footer {
+  background-color: #eee5d9;
+  padding: 40px 20px;
+  text-align: center;
+  color: #000;
+  font-family: 'Georgia', serif;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* ✅ Horizontally center child elements */
+  justify-content: center; /* ✅ Vertically center if needed */
+}

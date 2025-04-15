@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title> Boho Bodark Barn </title>
+    <style>
+        h1 {
+            font-family: "Merriweather";  
+        }
+        
+        h3 {
+           font-family: "Raleway"; 
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+    
+        h1 {
+            font-family: "Merriweather";  
+        }
+        
+        h3 {
+           font-family: "Raleway"; 
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        
+        /* Style the header with a grey background and some padding */
+        .header {
+            display: flex; /* Use flexbox */
+            justify-content: space-between; /* Space out the logo and the navigation links */
+            align-items: center; /* Center items vertically */
+            background-color: #E3DAC9;
+            padding: 3px 10px; /* Adjust padding as needed */
+        }
+
+        /* Style the header links */
+        .header a {
+            color: black;
+            text-align: center;
+            padding: 3px 10px; /* Adjust padding as needed */
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 4px;
+        }
+
+        /* Style the logo link */
+        .header a.logo {
+            font-size: 25px;
+            font-weight: bold;
+            margin-right: auto; /* Pushes the logo to the left */
+        }
+
+        /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+        @media screen and (max-width: 500px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .header a {
+                padding: 10px;
+                width: 100%; /* Make links take up full width */
+            }
+            .header-right {
+                width: 100%; /* Make the container take up full width */
+            }
+        }
+    
+        #header_container {
+            position: relative;
+            text-align: center;
+            color: white;
+            
+        }
+        
+        #header_image {
+           -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+            filter: blur(5px);
+            
+        }
+        
+        #header_text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        
+        div.scroll-container {
+            
+            overflow: auto;
+            white-space: nowrap;
+            padding: 10px;
+        }
+
+        div.scroll-container img {
+            padding: 10px;
+            width: 600;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 30px;
+            
+        }
+        
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+        
+        .card_container {
+            padding: 2px 16px;
+        }
+
+        .pdfbutton{
+            text-align: center;
+        }
+
+        .schedule_tour {
+           display: inline-block;
+           padding: 10px 20px;
+           margin-top: 20px;
+           color: white;
+           background-color: black;
+           text-decoration: none;
+           border-radius: 5px; 
+        }
+           
+    </style>
+    
+</head>
+    
+<body background="#E3DAC9">
+    <div id="home" class="header">
+        <a href="#home" class="logo"> <h1> Boho Bodark Barn </h1> </a>
+        <div class="header-right">
+            <a href="#about"> About Us </a>
+            <a href="#pricing"> Price </a>
+            <a href="#gallery"> Gallery </a>
+            <a href="#contact"> Contact Us </a>
+        </div>
+    </div> 
+    <div id="header_container">
+        <img id="header_image" src="Barn1.jpg" alt="Barnpic" style="width: 100%;">
+        <div id="header_text">
+            <h1 style="font-size: 60px;"> Boho Bodark Barn </h1>
+            <h3 style="text-align: center"> The perfect rustic setting to create unforgetable memories at our charming barn </h3>
+            <a class="schedule_tour"> schedule a Tour </a>
+
+        </div>
+    </div>
+    
+    <h1 id="about" style="text-align: center"> About Us: </h1>
+    <h3 style="text-align: center">
+        Bodark Barn was built in 2015 for our own wedding. <br>
+        Now, we want to share our beautiful barn with you! <br>
+        <br>
+        We like to consider ourselves more of a backyard wedding and event center. <br>
+        We are rustic, industrial, boho, and repurposed. We pride ourselves in being a DIY place.<br>
+        This allows you to really make your event your own and save a little money as well! <br>
+        We even offer a horse drawn carriage and animal additions to make your event unique! <br>
+        <br> 
+        Let us host your next event!! <br>
+    </h3>
+    
+    <h1 id="pricing" style="text-align: center"> Pricing </h1>
+    <h3 style="text-align: center">
+        <br>
+        Full weekend (Friday-Sunday): $5,000 <br>
+        This allows freedom to plan, decorate, rehearsal on Friday. Host your event all day Saturday and clean-up on Sunday. <br>
+        <br>
+        Single day option (this includes full access to the barn and and bridal suite for one full day) <br>
+        Saturday: $3,500 <br>
+        Friday or Sunday $3,000 <br>
+        <br>
+        Hourly Rate <br>
+        For smaller events such as baby shower, birthday, or small gathering we offer an hourly rate: $200 per hour <br>
+        <br>
+        Animal Additions <br>
+        Horse Drawn Carriage (to or from your event): $500 <br>
+        Beer Burrow: $250 <br>
+        Alpaca: $250 <br>
+        Event hours are 9am-12am <br>
+        <br>
+    </h3>
+    
+    <h1 id="gallery" style="text-align: center"> Gallery </h1> 
+    <br>
+    <!-- Barn -->
+    <div class="scroll-container">
+        <img src="Barn1.jpg" alt="Cinque Terre">
+        <img src="Barn2.jpg" alt="Forest">
+        <img src="Barn3.jpg" alt="Northern Lights">
+        <img src="Barn4.jpg" alt="Mountains">
+        <img src="Barn5.jpg" alt="Mountains">
+        <img src="Barn6.jpg" alt="Mountains">
+        <img src="Barn7.jpg" alt="Mountains">
+        <img src="Barn8.jpg" alt="Mountains">
+        <img src="Barn9.jpg" alt="Mountains">
+    </div>
+    
+    <br>
+    
+    <!-- Horse Carriage -->
+    <div class="scroll-container">
+        <img src="CarriageRide1.jpg" alt="Picture of carriage ride with person on it.">
+        <img src="CarriageRide2.JPG" alt="Angle view of the carriage ride.">
+        <img src="CarriageRide3.JPG" alt="A side profile of the carriage ride.">
+        <img src="CarriageRide4.JPG" alt="A side profile of the carriage ride again.">
+        <video width="600px" height="500px" controls poster="video-thumbnail.jpg">
+            <source src="CarriageRide5video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+    <br> 
+    
+    <!-- Alpaca -->
+    <div class="scroll-container">
+        <img src="Alpaca1.jpg" alt="Cinque Terre">
+        <img src="Alpaca2.jpg" alt="Forest">
+        <img src="Alpaca3.jpg" alt="Northern Lights">
+        <img src="Alpaca4.jpg" alt="Mountains">
+        <img src="Alpaca5.jpg" alt="Mountains">
+    </div>
+    
+    <br>
+    
+    <!-- Beer Burro -->
+    <div class="scroll-container">
+        <img src="BeerBurro1.jpg" alt="Picture of carriage ride with person on it.">
+        <img src="BeerBurro2.jpg" alt="Angle view of the carriage ride.">
+        <img src="BeerBurro3.jpg" alt="A side profile of the carriage ride.">
+    </div>
+
+    <br>
+
+    <!-- Chandelier -->
+    <div class="scroll-container">
+        <img src="chandelier_light_1.jpg" alt="Picture of carriage ride with person on it.">
+        <img src="chandelier_light_2.jpg" alt="Angle view of the carriage ride.">
+        <video width="600px" height="500px" controls poster="video-thumbnail.jpg">
+            <source src="chandelier_light_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <br>
+
+    <!-- Renovation Work -->
+    <div class="scroll-container">
+        <img src="Reno_1.jpg" alt="Picture of carriage ride with person on it.">
+        <img src="Reno_2.jpg" alt="Angle view of the carriage ride.">
+        <img src="Reno_3.jpg" alt="A side profile of the carriage ride.">
+        <img src="Reno_4.jpg" alt="renovation image">
+    </div>
+    
+    <!-- This is the footer of the web page -->
+    <div id="footer_container">
+        <h1 id="contact" style= "text-align: center"> Contact Us: </h1>
+        <h3 style= "text-align: center"> 
+            We kindly request that only serious inquiries about venue booking be made. Thank you for your understanding. <br>
+            We would love to show you around our farm! <br>
+            Contact us to schedule a tour:
+        </h3>
+        <h3 style= "text-align: center"> Phone: (409) 392-5024 </h3>
+        <h3 style= "text-align: center"> Email: Jag34ttu@gmail.com </h3>
+        <h3 style= "text-align: center"> Facebook: <a href="https://www.facebook.com/p/Boho-Bodark-Barn-100090049869600/" class="button-link" target="_blank"> Click Here </a></h3>
+        <h3 style= "text-align: center"> Instagram: <a href="https://www.facebook.com/p/Boho-Bodark-Barn-100090049869600/" class="button-link" target="_blank"> Click Here </a></h3>
+    </div>
+
+    <!-- This part is for the pdf download. -->
+    <div class="pdfbutton">
+        <h3 style="text-align: center"> BBB Contract: <button onclick="downloadPDF()"> Download PDF </button> </h3>
+        <!-- This portion is the JavaScript that will handle what action is taking once user clicks the button. -->
+        <script> 
+            function downloadPDF() {
+                window.open('final BBB CONTRACT.pdf', '_blank');
+            }
+        </script>
+    </div>
+        
+    <p style="text-align: center">&copy; <span id="year" style="text-align: center;"></span> Boho Bodark Barn. All rights reserved. </p>
+    
+    <script>
+        // This is the JavaScript to dynamically update the year.
+        // The script gets the current year using new Date().getFullYear().
+        // It then sets the textContent of the <span> with the id year to this current year.
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+    
+</html> 
