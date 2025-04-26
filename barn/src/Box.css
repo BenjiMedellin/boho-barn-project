@@ -1,3 +1,4 @@
+/* Main Box Layout */
 .box-container {
   flex-shrink: 0;
   width: 280px;
@@ -23,6 +24,7 @@
   color: #333;
 }
 
+/* Dropdown Content */
 .dropdown-content {
   background-color: #fdf8ef; /* light beige */
   padding: 20px;
@@ -40,6 +42,7 @@
   gap: 8px;
 }
 
+/* Total Price Section */
 .total-inside-box {
   margin-top: 20px;
   font-weight: bold;
@@ -49,6 +52,7 @@
   padding-top: 10px;
 }
 
+/* PDF Download Link */
 .pdf-link {
   display: inline-block;
   font-size: 1rem;
@@ -63,6 +67,7 @@
   border-color: #6a4f2b;
 }
 
+/* Upload Input */
 .upload-input {
   font-size: 1rem;
   padding: 6px;
@@ -70,11 +75,12 @@
   border-radius: 6px;
   background-color: #fff;
   cursor: pointer;
-  width: 90%;              /* ✅ Prevents overflow */
-  max-width: 300px;        /* ✅ Keeps it compact */
+  width: 90%;
+  max-width: 300px;
   box-sizing: border-box;
 }
 
+/* Submit Button */
 .submit-button {
   margin-top: 20px;
   padding: 10px 20px;
@@ -84,10 +90,9 @@
   border-radius: 6px;
   font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .submit-button:hover {
   background-color: #92633f;
 }
-
-

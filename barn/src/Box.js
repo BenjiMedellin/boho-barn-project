@@ -7,7 +7,9 @@ function Box({ title, options = [], onOptionToggle }) {
   const [localSelections, setLocalSelections] = useState([]);
   const [uploadedFile, setUploadedFile] = useState(null);
   const [submitStatus, setSubmitStatus] = useState(null);
-  const [fullName, setFullName] = useState(""); // ✅ Full name input
+  const [fullName, setFullName] = useState(""); 
+  const [isSubmitting, setIsSubmitting] = useState(false); // 🔒 Lock submit button
+  const [selectedDate, setSelectedDate] = useState(null); // 🗓️ Date selection (for future use)
 
   // ✅ Handle checkbox selection
   const handleToggle = (option) => {
@@ -26,28 +28,36 @@ function Box({ title, options = [], onOptionToggle }) {
 
   // ✅ Form submission handler
   const handleSubmit = () => {
-    if (!uploadedFile || fullName.trim() === "") {
-      alert("Please enter your full name and upload the signed contract before submitting.");
+    if (!uploadedFile || !fullName) {
+      alert("Please complete all fields before submitting.");
       return;
     }
+
+    setIsSubmitting(true); // 🔒 Lock the button immediately
 
     const formData = new FormData();
     formData.append("file", uploadedFile);
     formData.append("selections", JSON.stringify(localSelections));
-    formData.append("fullName", fullName); // ✅ Send full name to backend
+    formData.append("fullName", fullName);
 
-    fetch("http://localhost:5000/submit-package", {
+    // Only append selectedDate if it exists (you'll add date picker later)
+    if (selectedDate) {
+      formData.append("selectedDate", selectedDate.toISOString());
+    }
+
+    fetch("https://boho-barn-project.onrender.com/submit-package", {
       method: "POST",
       body: formData,
     })
-      .then((res) => res.json())
-      .then((data) => {
+      .then(res => res.json())
+      .then(data => {
         setSubmitStatus("success");
-        console.log("Response:", data);
+        setIsSubmitting(false);
       })
-      .catch((err) => {
+      .catch(err => {
         setSubmitStatus("error");
         console.error(err);
+        setIsSubmitting(false);
       });
   };
 
@@ -142,8 +152,12 @@ function Box({ title, options = [], onOptionToggle }) {
 
           {/* 🚀 Submit */}
           <div style={{ marginTop: "20px", textAlign: "center" }}>
-            <button onClick={handleSubmit} className="submit-button">
-              Submit My Package
+            <button
+              onClick={handleSubmit}
+              className="submit-button"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "Submitting..." : "Submit My Package"}
             </button>
           </div>
 
