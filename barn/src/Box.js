@@ -32,19 +32,18 @@ function Box({ title, options = [], onOptionToggle }) {
       alert("Please complete all fields before submitting.");
       return;
     }
-
+  
     setIsSubmitting(true); // 🔒 Lock the button immediately
-
+  
     const formData = new FormData();
     formData.append("file", uploadedFile);
     formData.append("selections", JSON.stringify(localSelections));
     formData.append("fullName", fullName);
-
-    // Only append selectedDate if it exists (you'll add date picker later)
+  
     if (selectedDate) {
       formData.append("selectedDate", selectedDate.toISOString());
     }
-
+  
     fetch("https://boho-barn-project.onrender.com/submit-package", {
       method: "POST",
       body: formData,
@@ -53,6 +52,10 @@ function Box({ title, options = [], onOptionToggle }) {
       .then(data => {
         setSubmitStatus("success");
         setIsSubmitting(false);
+  
+        setTimeout(() => {
+          window.location.reload(); // ✅ Auto-refresh page after 2 seconds
+        }, 2000);
       })
       .catch(err => {
         setSubmitStatus("error");
@@ -60,6 +63,7 @@ function Box({ title, options = [], onOptionToggle }) {
         setIsSubmitting(false);
       });
   };
+  
 
   // 💵 Total
   const boxTotal = localSelections.reduce((sum, item) => sum + item.price, 0);
