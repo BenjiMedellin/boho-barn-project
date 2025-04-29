@@ -19,7 +19,7 @@ function HomePage() {
   const packageOptions = [
     { type: "section", label: "Venue Packages" },
     { label: "Full Weekend (Fri–Sun)", price: 6500 },
-    { label: "Saturday Only", price: 3000 },
+    { label: "Saturday Only", price: 3500 },
     { label: "Friday or Sunday", price: 2500 },
 
     { type: "section", label: "Animal Add-Ons" },
